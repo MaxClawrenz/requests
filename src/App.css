@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.requestsHeader {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+.iconBack {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.iconBack:hover circle {
+  fill: #fff;
+} 
+.docname {
+  font-family: SF UI Display Bold !important;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 29px;
+  color: #313a4a;
+}
+.subHeader {
+  font-family: SF UI Display Semibold !important;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 21px;
+  padding-top: 16px;
+  color: #313a4a;
+  padding-bottom: 3px;
+  margin-bottom: 25px;
+}
+.allRequestsLink {
+  font-family: SF UI Display Regular !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: #209DD9;
+}
+.catRequestsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.requestsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   flex-direction: column;
+}
+.request_from_list_div{
+  width: fit-content;
+  margin-bottom: 6px;
+}
+
+.request_from_list_cat_div {
+  height: 54px;
+  border: 2px solid #FBBB10;
+  box-sizing: border-box;
+  border-radius: 21.5px;
+  margin-bottom: 33px;
+  margin-right: 45px;
+  width: fit-content;
+  display: flex;
+  font-size: 24px;
+  line-height: 29px;
+  color: #929090 !important;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 40px!important;
+}
+.request_from_list_cat_div:hover{
+  color: #000000 !important;
+}
+.request_from_list{
+  width: fit-content;
+}
+.zvezda{
+  color: #FBBB10;
+}
+.obyazatelnoe_zapolnenie{
+  margin: 8px 0;
+}
+.requestForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.requestFormElement {
+  margin: 10px 0px;
+  width: 90%;
+  font-size: 16px;
+}
+input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, textarea:focus{
+  border: unset;
+}
+textarea{
+  box-shadow: unset;
+}
+input[type=text]{
+  background-color: unset;
+  border: unset;
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+label{
+  font-size: 14px !important;
+  background: #f2f3f5;
+}
+label:not(.MuiButton-root) {
+  padding-right: 5px !important;
+}
+.MuiMenu-list li {
+  font-size: 14px;
+}
+.MuiListItemText-primary {
+  font-size: 16px;
+}
+.MuiListItemButton-root {
+  padding: 0;
+}
+.MuiListItem-root {
+  padding: 0;
+}
+.MuiList-root {
+  padding: 0;
+}
+.MuiInputLabel-asterisk {
+  color: #fbbb10;
+}
+.statements-body {
+  display: flex;
+}
+#zayavkiIT {
+  margin-bottom: 30px;
+}
+.link-block {
+  margin-right: 60px;
+}
+.text_IT{
+  width: 86px;
+}
+.statements-icon:hover rect[fill="white"] {
+  fill: #ffaf01;
+}
+.appeals-icon:hover path[fill-rule="evenodd"] {
+  fill: #ffaf01;
+}
+.MuiFormControlLabel-label {
+  font-size: 14px!important;
+}
+.MuiButton-root {
+  text-transform: none;
+}
+.MuiOutlinedInput-root textarea {
+  font-size: 20px;
+  line-height: 22px;
+}
+.MuiFormControl-fullWidth label {
+  margin-top: 11px;
+}
+.DocNameSkelet{
+  --bg-size: 500%;
+    --color-one: gray;
+    --color-two: white;
+    font-size: clamp(3rem, 25vmin, 8rem);
+    background: linear-gradient(
+        100deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: content-box;
+  border-radius: 8px;
+}
+.fileInput{
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.MuiCircularProgress-root {
+  margin-left: 15px;
+}
+.fileName {
+  margin-left: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.resultWindow {
+  align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #00000026;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 345px;
+    width: 439px;
+    justify-content: space-between;
+    left: 50%;
+    padding: 46px;
+    position: fixed;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    z-index: 19000;
+}
+.resultTitle{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28.64px;
+  font-family: SF UI Display Bold !important;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.heading {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.resultText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.09px;
+}
+.resultClose {
+  background-color: #0091d5;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  height: 38px;
+  width: 134px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconSendMail{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .DocNameSkelet {
+    animation: move-bg 10s linear infinite;
   }
-  to {
-    transform: rotate(360deg);
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
   }
 }

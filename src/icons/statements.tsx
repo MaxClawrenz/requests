@@ -1,0 +1,67 @@
+function Statements() {
+  return (
+    <svg
+      className="statements-icon"
+      width="87"
+      height="86"
+      viewBox="0 0 87 86"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        opacity="0.4"
+        x="0.960938"
+        width="86"
+        height="86"
+        rx="8"
+        fill="#209DD9"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M25.1611 24.2C25.1611 21.6043 27.2654 19.5 29.8611 19.5H54.3345L62.7611 27.9266V61.8C62.7611 64.3957 60.6569 66.5 58.0611 66.5H29.8611C27.2654 66.5 25.1611 64.3957 25.1611 61.8V24.2ZM52.3877 24.2L29.8611 24.2V61.8H58.0611V29.8734L52.3877 24.2Z"
+        fill="white"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M48.6611 21.85H53.3611V28.9H60.4111V33.6H50.6611C49.5566 33.6 48.6611 32.7046 48.6611 31.6V21.85Z"
+        fill="white"
+      />
+      <rect
+        x="33.2031"
+        y="40.7959"
+        width="21.5165"
+        height="3.21768"
+        rx="1.60884"
+        fill="white"
+      />
+      <rect
+        x="33.2031"
+        y="33.5957"
+        width="12.3607"
+        height="3.21768"
+        rx="1.60884"
+        fill="white"
+      />
+      <rect
+        x="33.2031"
+        y="47.9961"
+        width="21.5165"
+        height="3.21768"
+        rx="1.60884"
+        fill="white"
+      />
+      <rect
+        x="33.2031"
+        y="55.2979"
+        width="21.5165"
+        height="3.21768"
+        rx="1.60884"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
+export default Statements;
