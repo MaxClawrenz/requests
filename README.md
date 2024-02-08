@@ -3,6 +3,7 @@
 Стэк: React, TypeScript, MobX, react-router-dom, MUI
 
 Главная страница открывается по адресу /_wt/references_request_new
+
 <img width="211" alt="image" src="https://github.com/MaxClawrenz/requests/assets/142581038/d53029a4-334f-443c-b2f7-4b68a103c05f">
 
 При переходе в нужный раздел загружается либо список доступных заявок, либо форма заявки.
