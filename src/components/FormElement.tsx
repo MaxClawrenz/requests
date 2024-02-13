@@ -22,6 +22,7 @@ function FormElement(props: IFormProps) {
   let boxValues: string[] = [];
   const [selectValue, setSelectValue] = useState<string | undefined>(undefined);
   const [fileName, setFileName] = useState<string>("");
+  const [fileLoading, setFileLoading] = useState<boolean>(false);
 
   useEffect(() => {
     formObject.updateMyForm(props.name, null);
@@ -59,7 +60,8 @@ function FormElement(props: IFormProps) {
   function imageLoad(event: React.ChangeEvent<HTMLInputElement>) {
     if (event.target.files) {
       formObject.loading = true;
-      formObject.imageLoading = true;
+      //formObject.imageLoading = true;
+      setFileLoading(true);
       const data = new FormData();
       data.append("storyImage", event.target.files[0]);
       props.setReset(false);
@@ -76,7 +78,8 @@ function FormElement(props: IFormProps) {
         .then((res: AxiosResponse) => {
           formObject.updateMyForm(event.target.name, res.data.split("=")[1]);
           formObject.loading = false;
-          formObject.imageLoading = false;
+          //formObject.imageLoading = false;
+          setFileLoading(false);
           if (event.target.files) setFileName(event.target.files[0].name);
         });
     } else {
@@ -184,8 +187,8 @@ function FormElement(props: IFormProps) {
               required={props.is_required}
               style={{ display: "none" }}
             />
-            {formObject.imageLoading && <CircularProgress size={30} />}
-            {!formObject.imageLoading && fileName && (
+            {fileLoading && <CircularProgress size={30} />}
+            {!fileLoading && fileName && (
               <span className="fileName">{fileName}</span>
             )}
           </div>

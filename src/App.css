@@ -29,10 +29,18 @@
   font-style: normal;
   font-size: 20px;
   line-height: 21px;
-  padding-top: 16px;
+  /* padding-top: 16px; */
   color: #313a4a;
   padding-bottom: 3px;
+  /* margin-bottom: 25px; */
+}
+.subHeaderIcon {
+  display: flex;
+  align-items: center;
   margin-bottom: 25px;
+}
+.mark {
+  cursor: pointer;
 }
 .allRequestsLink {
   font-family: SF UI Display Regular !important;
@@ -254,4 +262,29 @@ label:not(.MuiButton-root) {
       background-position: var(--bg-size) 0;
     }
   }
+}
+
+/* темная тема */
+.nightmode .docname {
+  color: #EAECEF;
+}
+.nightmode .subHeader {
+  color: #EAECEF;
+}
+.nightmode .request_from_list_cat_div:hover {
+  color: #eaecef !important;
+}
+.nightmode label {
+  background: rgb(17 21 28);
+  color: #EAECEF;
+}
+.nightmode .requestFormElement {
+  background: #11151c;
+  color: #EAECEF;
+}
+.nightmode .fileName {
+  color: #EAECEF;
+}
+.nightmode input {
+  box-shadow: unset;
 }

@@ -23,6 +23,8 @@ function Main() {
         doc_name={data?.doc_name}
         parent_name={data?.parent_name}
         isLoading={isLoading}
+        is_favourite={data?.is_favourite}
+        docId={docId}
       />
       {data?.categories && data.categories.length > 0 && !isLoading && (
         <div className="requests_list">Выбор разделов</div>

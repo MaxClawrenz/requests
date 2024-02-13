@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import IconBack from "./IconBack";
 import { IHeader } from "../types/IHeader";
 import NameSkelet from "./Skeletons/NameSkelet";
+import AddMark from "../icons/addMark";
 
 function Header(props: IHeader) {
   const navigate = useNavigate();
@@ -34,7 +35,10 @@ function Header(props: IHeader) {
       {props.isLoading ? (
         <NameSkelet width={200} height={20} mb={25} mt={20} mr={0} />
       ) : (
-        <div className="subHeader">{props.doc_name}</div>
+        <div className="subHeaderIcon">
+          <div className="subHeader">{props.doc_name}</div>
+          <AddMark docId={props.docId} isFav={props.is_favourite} />
+        </div>
       )}
     </>
   );

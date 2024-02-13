@@ -5,5 +5,6 @@ export interface IData {
     doc_name: string,
     parent_name: string,
     categories: ICat[],
-    requests: IReq[]
+    requests: IReq[],
+    is_favourite: boolean
 }
